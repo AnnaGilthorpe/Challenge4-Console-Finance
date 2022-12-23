@@ -87,7 +87,9 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+console.log ("Financial Analysis")
 
+console.log ("----------------------------")
 
 
 //The total number of months included in the dataset.
@@ -100,26 +102,24 @@ console.log(totalMonths);
 
 //* The net total amount of Profit/Losses over the entire period.
 // Total number of Profit/Losses [1]
+
+let total = 0
+
 for (let i = 0; i < finances.length; i++) {
-    console.log(finances[i])
 }
 
 for (let i = 0; i < finances.length; i++) {
-    console.log(finances[i][1])
+  
+}
 
-    for(let i = 0; i <finances.length; i++) {[
+for(let i = 0; i <finances.length; i++) {
         total += finances[i][1]
-    ]
 }
 
+console.log(total)
 
-}
-let totalProfitLoss = 0;
 
-for (let i = 0; finances.length; i++) {
-    totalProfitLoss = finances [i][1]
-}
-console.log(totalProfitLoss);
+
 
 
 
@@ -127,8 +127,12 @@ console.log(totalProfitLoss);
 //  * You will need to track what the total change in profits are from month to month and then find the average.
 //  * (`Total/Number of months`)
 
+//* (Month 2 [1] - Month 1 [1]) = theChange (for loop to calculate all of them?) then total of theChange / months (86)
+
 //* The greatest increase in profits (date and amount) over the entire period.
+//* thechange number is < ... How to keep that code fluid so it can adapt to new rows being added?
 
 //* The greatest decrease in losses (date and amount) over the entire period.
+//* Opposite of prior q
 
 //When you open your code in the browser your resulting analysis should look similar to the following:
