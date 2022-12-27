@@ -127,6 +127,16 @@ console.log(total)
 //  * You will need to track what the total change in profits are from month to month and then find the average.
 //  * (`Total/Number of months`)
 
+let change = 0 
+
+for (let i = 1; i < finances.length; i++) {
+    change = (finances [i][1] - finances [i-1][1])
+}
+
+console.log(change)
+
+console.log (change/totalMonths)
+
 //* (Month 2 [1] - Month 1 [1]) = theChange (for loop to calculate all of them?) then total of theChange / months (86)
 
 //* The greatest increase in profits (date and amount) over the entire period.
