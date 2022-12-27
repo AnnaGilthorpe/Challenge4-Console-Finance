@@ -128,14 +128,17 @@ console.log(total)
 //  * (`Total/Number of months`)
 
 let change = 0 
+let totalChange = 0
 
 for (let i = 1; i < finances.length; i++) {
-    change = (finances [i][1] - finances [i-1][1])
+    totalChange += (finances [i][1] - finances [i-1][1])
 }
 
-console.log(change)
+console.log(totalChange)
 
-console.log (change/totalMonths)
+
+
+console.log (totalChange/totalMonths-1)
 
 //* (Month 2 [1] - Month 1 [1]) = theChange (for loop to calculate all of them?) then total of theChange / months (86)
 
