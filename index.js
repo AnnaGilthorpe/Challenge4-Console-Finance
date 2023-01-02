@@ -97,7 +97,7 @@ console.log ("----------------------------")
 let totalMonths = 0;
 totalMonths = finances.length;
 
-console.log(totalMonths);
+console.log ("Total Months: " + totalMonths);
 
 
 //* The net total amount of Profit/Losses over the entire period.
@@ -116,7 +116,7 @@ for(let i = 0; i <finances.length; i++) {
         total += finances[i][1]
 }
 
-console.log(total)
+console.log("Total: $" + total);
 
 
 
@@ -129,6 +129,12 @@ console.log(total)
 
 let change = 0 
 let totalChange = 0
+
+for (let i = 1; i < finances.length; i++) {
+    change += (finances [i][1] - finances [i-1][1])
+}
+
+console.log(change)
 
 for (let i = 1; i < finances.length; i++) {
     totalChange += (finances [i][1] - finances [i-1][1])
