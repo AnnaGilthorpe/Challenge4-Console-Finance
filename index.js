@@ -137,7 +137,7 @@ for (let i = 1; i < finances.length; i++) {
 averageChange = (change/(totalMonths-1));
 
 
-console.log ("Average Change: " + averageChange.toFixed(2));
+console.log ("Average Change: $" + averageChange.toFixed(2));
 
 //* (Month 2 [1] - Month 1 [1]) = theChange (for loop to calculate all of them?) then total of theChange / months (86)
 
@@ -145,6 +145,7 @@ console.log ("Average Change: " + averageChange.toFixed(2));
 //* thechange number is < ... How to keep that code fluid so it can adapt to new rows being added?
 
 let largestChange = 0;
+let largestChangeMonth = [];
 
 for (let i = 1; i < finances.length; i++) {
     
@@ -153,19 +154,21 @@ for (let i = 1; i < finances.length; i++) {
 if (change >= largestChange) {
         largestChange = change;
         
-        
+        largestChangeMonth = finances [i][0] + " ($" + largestChange +")";     
     }
 
 };
+//* also print the [0] string in the largestChange array
+console.log("Greatest Increase in Profits: " + largestChangeMonth);
 
-console.log("Greatest Increase: $" + largestChange);
 
-//* console.table(finances);
 
 
 //* The greatest decrease in losses (date and amount) over the entire period.
 
 let smallestChange = 0;
+let smallestChangeMonth = 0;
+
 
 for (let i = 1; i < finances.length; i++) {
     
@@ -174,14 +177,16 @@ for (let i = 1; i < finances.length; i++) {
 if (change <= smallestChange) {
         smallestChange = change;
         
-        
+        smallestChangeMonth = finances [i][0] + " ($" + smallestChange +")";  
     }
 
 };
 
-console.log("Greatest Decrease: $" + smallestChange);
+console.log("Greatest Decrease in Profits: " + smallestChangeMonth);
 
 
 //* Opposite of prior q
 
 //When you open your code in the browser your resulting analysis should look similar to the following:
+
+//* console.table(finances);
