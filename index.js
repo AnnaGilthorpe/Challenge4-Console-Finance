@@ -144,7 +144,44 @@ console.log ("Average Change: " + averageChange.toFixed(2));
 //* The greatest increase in profits (date and amount) over the entire period.
 //* thechange number is < ... How to keep that code fluid so it can adapt to new rows being added?
 
+let largestChange = 0;
+
+for (let i = 1; i < finances.length; i++) {
+    
+    change = (finances [i][1] - finances [i-1][1]);
+
+if (change >= largestChange) {
+        largestChange = change;
+        
+        
+    }
+
+};
+
+console.log("Greatest Increase: $" + largestChange);
+
+//* console.table(finances);
+
+
 //* The greatest decrease in losses (date and amount) over the entire period.
+
+let smallestChange = 0;
+
+for (let i = 1; i < finances.length; i++) {
+    
+    change = (finances [i][1] - finances [i-1][1]);
+
+if (change <= smallestChange) {
+        smallestChange = change;
+        
+        
+    }
+
+};
+
+console.log("Greatest Decrease: $" + smallestChange);
+
+
 //* Opposite of prior q
 
 //When you open your code in the browser your resulting analysis should look similar to the following:
