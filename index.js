@@ -103,7 +103,7 @@ console.log ("Total Months: " + totalMonths);
 //* The net total amount of Profit/Losses over the entire period.
 // Total number of Profit/Losses [1]
 
-let total = 0
+let total = 0;
 
 for (let i = 0; i < finances.length; i++) {
 }
@@ -127,24 +127,17 @@ console.log("Total: $" + total);
 //  * You will need to track what the total change in profits are from month to month and then find the average.
 //  * (`Total/Number of months`)
 
-let change = 0 
-let totalChange = 0
+let change = 0;
+let averageChange = 0;
 
 for (let i = 1; i < finances.length; i++) {
-    change += (finances [i][1] - finances [i-1][1])
-}
+    change += (finances [i][1] - finances [i-1][1]);
+};
 
-console.log(change)
-
-for (let i = 1; i < finances.length; i++) {
-    totalChange += (finances [i][1] - finances [i-1][1])
-}
-
-console.log(totalChange)
+averageChange = (change/(totalMonths-1));
 
 
-
-console.log (totalChange/totalMonths-1)
+console.log ("Average Change: " + averageChange.toFixed(2));
 
 //* (Month 2 [1] - Month 1 [1]) = theChange (for loop to calculate all of them?) then total of theChange / months (86)
 
