@@ -1,4 +1,6 @@
-var finances = [
+
+//Data set
+let finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
@@ -87,21 +89,22 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+//Console title formatting
 console.log ("Financial Analysis")
 
 console.log ("----------------------------")
 
 
-//The total number of months included in the dataset.
-//The total number of [0] array rows
+//Calculating the total number of months included in the dataset.
 let totalMonths = 0;
 totalMonths = finances.length;
 
+//Console Total Months formatting
 console.log ("Total Months: " + totalMonths);
 
 
-//* The net total amount of Profit/Losses over the entire period.
-// Total number of Profit/Losses [1]
+//Calculating the net total amount of Profit/Losses over the entire period.
+// Working out the total number of Profit/Losses [1]
 
 let total = 0;
 
@@ -111,65 +114,62 @@ for (let i = 0; i < finances.length; i++) {
 for (let i = 0; i < finances.length; i++) {
   
 }
-
+//For loop that totals the $ numbers in data set array [i][1]
 for(let i = 0; i <finances.length; i++) {
         total += finances[i][1]
 }
-
+//Console Total Number of porfit/Losses formatting
 console.log("Total: $" + total);
 
 
 
-
-
-
-//* The average of the **changes** in Profit/Losses over the entire period.
+// Calculating the average of the **changes** in Profit/Losses over the entire period.
 //  * You will need to track what the total change in profits are from month to month and then find the average.
 //  * (`Total/Number of months`)
 
 let change = 0;
 let averageChange = 0;
-
+ 
+//For loop which substracts last months profits from exisiting one and totals all of those $ to generate the total 'change'
 for (let i = 1; i < finances.length; i++) {
     change += (finances [i][1] - finances [i-1][1]);
 };
-
+// Calculating the averageChange by dividing the change by the totalMonths - 1 (as the first month is should not be used)
 averageChange = (change/(totalMonths-1));
 
-
+// Console Average Change formatting (to two deicmal places)
 console.log ("Average Change: $" + averageChange.toFixed(2));
 
-//* (Month 2 [1] - Month 1 [1]) = theChange (for loop to calculate all of them?) then total of theChange / months (86)
 
-//* The greatest increase in profits (date and amount) over the entire period.
-//* thechange number is < ... How to keep that code fluid so it can adapt to new rows being added?
+// Calculating the greatest increase in profits (date and amount) over the entire period.
 
 let largestChange = 0;
 let largestChangeMonth = [];
-
+ // For loop calculating the changes in months with an added IF statement that calculates the largestChange.
 for (let i = 1; i < finances.length; i++) {
     
     change = (finances [i][1] - finances [i-1][1]);
 
 if (change >= largestChange) {
         largestChange = change;
-        
+
+// Defining largestChangeMonth to target the date and the $ number
         largestChangeMonth = finances [i][0] + " ($" + largestChange +")";     
     }
 
 };
-//* also print the [0] string in the largestChange array
+// Console formatting the Greatest Increase in Profits
 console.log("Greatest Increase in Profits: " + largestChangeMonth);
 
 
 
 
-//* The greatest decrease in losses (date and amount) over the entire period.
+// Calculating the greatest decrease in losses (date and amount) over the entire period.
 
 let smallestChange = 0;
 let smallestChangeMonth = 0;
 
-
+// Like above but the opposite. For loop calculating the changes in months with an added IF statement that calculates the smallestChange.
 for (let i = 1; i < finances.length; i++) {
     
     change = (finances [i][1] - finances [i-1][1]);
@@ -177,16 +177,10 @@ for (let i = 1; i < finances.length; i++) {
 if (change <= smallestChange) {
         smallestChange = change;
         
+// Defining smallestChangeMonth to target the date and the $ number
         smallestChangeMonth = finances [i][0] + " ($" + smallestChange +")";  
     }
 
 };
-
+// Console formatting the Greatest Decrease in Profits
 console.log("Greatest Decrease in Profits: " + smallestChangeMonth);
-
-
-//* Opposite of prior q
-
-//When you open your code in the browser your resulting analysis should look similar to the following:
-
-//* console.table(finances);
