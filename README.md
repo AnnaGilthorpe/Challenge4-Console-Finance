@@ -24,3 +24,4 @@ Installation
 N/A
 Usage
 Users can access the answers via the console
+ ![Screenshot](images/Challenge4screenshot.png)
