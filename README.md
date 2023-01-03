@@ -1,4 +1,4 @@
-# Challenge4 Console Finance
+# Challenge Four Console Finance
 
 Description
 The aim of this challenge was to create javascript code for analyzing the financial records of a company.
@@ -22,6 +22,8 @@ Technologies used:- MAC Terminal, VS Code and Git Hub.
 
 Installation
 N/A
+ 
+ 
 Usage
 Users can access the answers via the console
  ![Screenshot](/Images/Challenge4screenshot.png)
