@@ -1,4 +1,4 @@
-# Challenge4-Console-Finance
+# Challenge4 Console Finance
 
 Description
 The aim of this challenge was to create javascript code for analyzing the financial records of a company.
